@@ -15,7 +15,7 @@ class _FileReaderPageState extends State<FileReaderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("文档"),
+        title: Text("Documento"),
       ),
       body: FileReaderView(
         filePath: widget.filePath,

@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
   asset2Local(String type, String assetPath) async {
     if (Platform.isAndroid) {
       if (!await Permission.storage.isGranted) {
-        debugPrint("没有存储权限");
+        debugPrint("Permisos no concedidos");
         return false;
       }
     }
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
     }
     await file.create(recursive: true);
     //await file.create();
-    debugPrint("文件路径->" + file.path);
+    debugPrint("Ruta archivo->" + file.path);
     ByteData bd = await rootBundle.load(assetPath);
     await file.writeAsBytes(bd.buffer.asUint8List(), flush: true);
     return true;
